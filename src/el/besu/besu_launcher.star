@@ -17,7 +17,7 @@ DISCOVERY_PORT_NUM = 30303
 ENGINE_HTTP_RPC_PORT_NUM = 8551
 METRICS_PORT_NUM = 9001
 
-JAVA_OPTS = {"JAVA_OPTS": "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n"}
+JAVA_OPTS = {"JAVA_OPTS": "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"}
 
 ENTRYPOINT_ARGS = ["sh", "-c"]
 
@@ -133,6 +133,7 @@ def get_config(
         constants.RPC_PORT_ID: RPC_PORT_NUM,
         constants.WS_PORT_ID: WS_PORT_NUM,
         constants.METRICS_PORT_ID: METRICS_PORT_NUM,
+        constants.JAVA_DEBUG: 5005
     }
     used_ports = shared_utils.get_port_specs(used_port_assignments)
 

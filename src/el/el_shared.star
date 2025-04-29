@@ -8,6 +8,7 @@ def get_general_el_public_port_specs(public_ports_for_component):
         constants.TCP_DISCOVERY_PORT_ID: discovery_port,
         constants.UDP_DISCOVERY_PORT_ID: discovery_port,
         constants.ENGINE_RPC_PORT_ID: public_ports_for_component[1],
+        constants.JAVA_DEBUG: 5005
     }
     public_ports = shared_utils.get_port_specs(public_port_assignments)
     return public_ports, discovery_port
