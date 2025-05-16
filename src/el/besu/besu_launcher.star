@@ -143,7 +143,6 @@ def get_config(
         constants.METRICS_PORT_ID: METRICS_PORT_NUM,
         constants.RPC_PORT_ID: RPC_PORT_NUM,
         constants.WS_PORT_ID: WS_PORT_NUM,
-        constants.METRICS_PORT_ID: METRICS_PORT_NUM,
         constants.JAVA_DEBUG: 5005
     }
     used_ports = shared_utils.get_port_specs(used_port_assignments)
